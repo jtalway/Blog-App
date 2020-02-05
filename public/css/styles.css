@@ -1,0 +1,70 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: Ubuntu;
+  }
+
+h1 {
+  color: #1abc9c;
+  font-weight: 200;
+  font-variant: small-caps;
+}
+
+h3 {
+  color: #1abc9c;
+  font-weight: 200;
+    font-variant: small-caps;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.date {
+  font-weight: 100;
+  color: gray;
+  font-size: 0.9em;
+}
+
+.home {
+  padding: 10px 0 30px;
+}
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #1abc9c;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 14px;
+  color: #fff;
+}
