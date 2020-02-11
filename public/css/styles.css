@@ -5,18 +5,19 @@ html {
 
 body {
   font-family: Ubuntu;
-  }
+}
 
 h1 {
-  color: #1abc9c;
+  color: #27496d;
   font-weight: 200;
   font-variant: small-caps;
+  padding-top: 25px;
 }
 
 h3 {
-  color: #1abc9c;
+  color: #0c7b93;
   font-weight: 200;
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 p {
@@ -24,20 +25,32 @@ p {
 }
 
 .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
 }
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+
+.navbar-nav {
+  display: inline-block;
+}
+
+.navbar-nav>li {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar-nav li a:hover {
+  color: #00a8cc !important;
 }
 
 .date {
@@ -51,20 +64,25 @@ p {
 }
 
 .footer-padding {
-	padding-bottom: 60px;
+  padding-bottom: 60px;
 }
 
 .footer {
-	position: absolute;
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #27496d;
 }
 
 .footer p {
-	margin-top: 25px;
-	font-size: 14px;
+  margin-top: 25px;
+  font-size: 14px;
   color: #fff;
+}
+
+.footer a {
+  color: #fff;
+  padding-right: 50px;
 }

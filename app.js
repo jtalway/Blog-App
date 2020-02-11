@@ -7,9 +7,9 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 
 // Create starting (default) content
-const homeStartingContent = "This is the ramblings of an insane madman... clearly. Dive in if you dare!";
-const aboutContent = "I am Jason Alway, a web developer, computer programmer, and ethical hacker.";
-const contactContent = "Feel free to contact me via email at jtalway@gmail.com";
+const homeStartingContent = "Click COMPOSE to create a new post. Enter a title for your post and the body content, then press PUBLISH and you'll be redirected to the home page where a part of it will be displayed. Click on READ MORE to see the full post on its own page. While there, click on DELETE POST if you wish to delete the post.";
+const aboutContent = "A simple blogging application using JavaScript, Node, Express, MongoDB.";
+const contactContent = "Hi I'm Jason. I'm a freelance Full-Stack Web Developer.";
 // Create the app using express
 const app = express();
 // Set the view engine using ejs
@@ -94,13 +94,27 @@ app.get("/posts/:postId", function(req, res){
 
      title: post.title,
      date: post.date,
-     content: post.content
+     content: post.content,
+     id: requestedPostId
 
    });
 
  });
 });
 
+app.post("/delete", (req, res) => {
+    // Get id of post to be deleted from request body (passed from post.ejs btn)
+    const requestedId = req.body.deleteButton;
+    // Search database for post and delete; redirect to home route
+    Post.findByIdAndDelete({_id: requestedId}, (err) => {
+        if (!err) {
+            // console.log("Blog post successfully deleted!");
+            res.redirect("/");
+        } else {
+            console.log(err);
+        }
+    });
+});
 
 // LISTEN
 let port = process.env.PORT;
