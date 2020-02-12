@@ -4,20 +4,20 @@ html {
 }
 
 body {
-  font-family: Ubuntu;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   color: #27496d;
-  font-weight: 200;
+  font-weight: 100;
   font-variant: small-caps;
   padding-top: 25px;
 }
 
 h3 {
   color: #0c7b93;
-  font-weight: 200;
-  font-variant: small-caps;
+  font-weight: 100;
+
 }
 
 p {
@@ -36,7 +36,7 @@ p {
   border-radius: 0;
   margin-bottom: 0;
   font-size: 12px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
 
 .navbar-nav {
@@ -45,8 +45,8 @@ p {
 
 .navbar-nav>li {
   display: inline-block;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .navbar-nav li a:hover {
@@ -72,17 +72,16 @@ p {
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 60px;
-  background-color: #27496d;
+  height: 40px;
+  background-color: #6c757d;
+  color: #fff;
 }
 
 .footer p {
-  margin-top: 25px;
-  font-size: 14px;
-  color: #fff;
+  margin-top: 12px;
+  font-size: 12px;
 }
 
 .footer a {
   color: #fff;
-  padding-right: 50px;
 }
