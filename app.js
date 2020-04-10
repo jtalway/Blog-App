@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+require('dotenv').config();
 
 // Create starting (default) content
 const homeStartingContent = "Click COMPOSE to create a new post. Enter a title for your post and the body content, then press PUBLISH and you'll be redirected to the home page where a part of it will be displayed. Click on READ MORE to see the full post on its own page. While there, click on DELETE POST if you wish to delete the post.";
@@ -19,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Tell express our files are in the public folder
 app.use(express.static("public"));
 // connect to mongoDB /DBname
-mongoose.connect("mongodb://localhost:27017/blogDB", {
+mongoose.connect("mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-3kne9.mongodb.net/BlogDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
