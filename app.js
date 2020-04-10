@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Tell express our files are in the public folder
 app.use(express.static("public"));
 // connect to mongoDB /DBname
-mongoose.connect("mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-3kne9.mongodb.net/BlogDB?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-3kne9.mongodb.net/BlogDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
